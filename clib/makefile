@@ -1,8 +1,8 @@
 CC      := gcc
 LD      := ld
-CFLAGS  :=
+CFLAGS  := -fPIC -fno-stack-protector
 LIB		:= -luuid
-LDFLAGS := -shared -fpic
+LDFLAGS := -shared 
 SOURCE  := $(wildcard *.c)
 OBJS    := $(patsubst %.c,%.o,$(SOURCE))
 TARGET_LIB := libuuidx.so
